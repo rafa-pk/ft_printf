@@ -2,7 +2,7 @@
 
 ## What are  variadic functions?
 Variadic functions are functions that take in a fixed parameter and any number of arguments, they can be prototyped like so:
-> return_type	name(fixed_arg, ...);
+> 'return_type	name(fixed_arg, ...);'
 
 
 ## How do they work?
@@ -22,7 +22,7 @@ Variadic functions are functions that take in a fixed parameter and any number o
 
 ### How is va_list arg a pointer but takes no star?
 va_list is a type defined in the strdag library. It is tipically declared as a pointer to struct, which holds information about the arguments passed to the variadic function.Therefore it is already defined as a pointer, which makes it possible for us to declare it as:
-> va_list	ap;
+> 'va_list	ap;'
 
 Which means there is now a va_list type variable, which is a pointer to a struct containing the variable arfuments.
 
@@ -30,15 +30,24 @@ Which means there is now a va_list type variable, which is a pointer to a struct
 va_list, va_arg, va_copy and va_end are functions which take va_list as input  and enable us to interact with the struct it points to.
 They're prototyped as follows:
 va_start
-> void	va_start(va_list ap, fixed_arg);
+> 'void	va_start(va_list ap, fixed_arg);'
 
 va_arg
-> type	va_arg(va_list ap, type);
+> 'type	va_arg(va_list ap, type);'
 
 va_copy
-> void	va_copy(va_list dest, va_list src);
+> 'void	va_copy(va_list dest, va_list src);'
 
 va_end
-> void	va_end(va_list ap);
+> 'void	va_end(va_list ap);'
 
+Note: By convention, the va_list is called ap, which refers to argument pointer.
+## Alright, what about printf now?
+
+### What is it?
+The printf function produces output according to a format, it returns the number of characters it printed (excluding nulls). It is a variadic function, which as we've seen can take a variable number of arguments, of different data types.
+It is prototyped as follows:
+> 'int	printf(const char	*format, ...);'
+
+### How will we implement ft_printf?
 
