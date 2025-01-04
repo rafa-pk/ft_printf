@@ -49,5 +49,21 @@ The printf function produces output according to a format, it returns the number
 It is prototyped as follows:
 > 'int	printf(const char	*format, ...);'
 
+### Requirements
+- Deal with the following conversions: &c (single char), %s (string of chars), %p (argument of void* in hexadecimal form), %d (base 10 decimal, int), %i (base 10 nb, int), %u (unsigned decimal number), %x (number in hexadecimal form with lowercase), %X (number in hexadecimal form with uppercase), %% (percentage sign)
+- no need to deal with buffers
+- library has to be called libftprintf.a/h
+- (if doing bonus part): deal with all different combinations of using the "-O" flag and min width of field for every conversion
+- (if doing bonus part): deal with the following flags — "#", " ", "+"
 ### How will we implement ft_printf?
+in the following example:
+> 'ft_printf("%d, %c", 42, n);'
 
+"%d, %c" is the fixed variable — the const char * , which is a string of characters to be printed to the standard output, with specific data types where format specfiers figure. 
+42 and n are the variable arguments, which are the variables that the format specifiers refer to and replace within the string.
+ 
+1. implement necessary auxiliary functions and utilities
+2. itterate through the input string and check each character individually
+3. if it is not a string format specifier, print it to the standard output
+4. if it is a string format specifier, do the needed conversions and print it to the standard outpu
+5. return the number of characters printed
