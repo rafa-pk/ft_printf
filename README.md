@@ -31,10 +31,13 @@ va_list, va_arg, va_copy and va_end are functions which take va_list as input  a
 They're prototyped as follows:
 va_start
 > void	va_start(va_list ap, fixed_arg);
+
 va_arg
 > type	va_arg(va_list ap, type);
+
 va_copy
 > void	va_copy(va_list dest, va_list src);
+
 va_end
 > void	va_end(va_list ap);
 
