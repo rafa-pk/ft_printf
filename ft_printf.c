@@ -3,40 +3,75 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raica-ba <raica-ba@student.42lisboa.c      +#+  +:+       +#+        */
+/*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:02:19 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/05 07:50:08 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/05 08:14:06 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+type	conversion_cases(char format_specifier, va_list ap)
+{
+	if (format_specifier == c)
+	{
+		va_arg(ap, char);
+	}
+	else if (format_specifier == s)
+	{
+		va_arg(ap, char*)
+	}
+	else if (format_specifier == p)
+	{
 
+	}
+	else if (format_specifier == d || format_specifier == i)
+	{
+		va_arg(ap, int);
+	}
+	else if (format_specifier == u)
+	{
 
-int	printf(char *str, ...)
+	}
+	else if (format_specifier == x)
+	{
+
+	}
+	else if (format_specifier == X)
+	{
+
+	}
+	else if (format_specifier == %)
+	{
+
+	}
+	else
+}
+
+int	printf(const char *str, ...)
 {
 	va_list	ap;
 	int		i;
-	int		print_count;
+	int		count_printed;
 
 	va_start(ap, str);
 	i = 0;
-	printed_count = 0;
+	count_printed = 0;
 	while (str[i])
 	{
 		if (str[i] == '%' && str[i + 1])
 		{
-			print_count += conversion_cases();
+			count_printed += conversion_cases(str[i + 1]);
 			i++;
 		}
 		else
 		{
-			print_count += putchar();
+			count_printed += putchar();
 			i++;
 		}
 	
 	}
 	va_end(ap);
-	return (printed_count);
+	return (count_printed);
 }
