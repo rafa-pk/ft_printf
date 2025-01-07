@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:02:19 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/07 18:53:26 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/07 19:08:00 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	conversion_cases(char format_specifier, va_list ap)
 	else if (format_specifier == p)
 		print += function(va_arg(ap, uintptr_t));
 	else if (format_specifier == d || format_specifier == i)
-		print += function(va_arg(ap, int));
+		print += ft_putnbr(va_arg(ap, int));
 	else if (format_specifier == u)
 		print += function(va_arg(ap, unsigned int));
 	else if (format_specifier == x)
@@ -32,7 +32,7 @@ int	conversion_cases(char format_specifier, va_list ap)
 	else if (format_specifier == X)
 		print += function(va_arg(ap, unsigned int));
 	else if (format_specifier == %)
-		print += function
+		print += ft_percentage(void);
 	else
 }
 

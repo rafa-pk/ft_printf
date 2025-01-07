@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 20:58:26 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/07 18:49:53 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/07 19:07:36 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ size_t	ft_strlen(char*);
 int		ft_putchar(int c);
 int		ft_putstr(char	*str);
 int		ft_putnbr(int nb);
+int		ft_percent(void);
 
 #endif
