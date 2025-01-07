@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 20:58:26 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/07 17:35:12 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/07 18:49:53 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,12 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdint.h>
+
+int		ft_printf(const char *str, ...);
+int		conversion_cases(char format_specifier, va_list ap);
+size_t	ft_strlen(char*);
+int		ft_putchar(int c);
+int		ft_putstr(char	*str);
+int		ft_putnbr(int nb);
 
 #endif
