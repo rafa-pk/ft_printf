@@ -6,12 +6,12 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 20:58:26 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/05 07:35:37 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/07 17:35:12 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
-# define FT_LIBFT_H
+# define FT_PRINTF_H
 
 # include <stdio.h>
 # include <stdlib.h>
