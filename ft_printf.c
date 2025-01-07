@@ -6,26 +6,33 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:02:19 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/07 17:38:51 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/07 18:15:52 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-type	conversion_cases(char format_specifier, va_list ap)
+int	conversion_cases(char format_specifier, va_list ap)
 {
 	int	print;
 
 	print = 0;
 	if (format_specifier == c)
-		
+		print += function(va_arg(ap, int));
 	else if (format_specifier == s)
+		print += function(va_arg(ap, char*));
 	else if (format_specifier == p)
+		print += function(va_arg(ap, uintptr_t));
 	else if (format_specifier == d || format_specifier == i)
+		print += function(va_arg(ap, int));
 	else if (format_specifier == u)
+		print += function(va_arg(ap, unsigned int));
 	else if (format_specifier == x)
+		print += function(va_arg(ap, unsigned int));
 	else if (format_specifier == X)
+		print += function(va_arg(ap, unsigned int));
 	else if (format_specifier == %)
+		print += function
 	else
 }
 
