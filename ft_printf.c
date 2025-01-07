@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:02:19 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/07 18:46:35 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/07 18:53:26 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	conversion_cases(char format_specifier, va_list ap)
 
 	print = 0;
 	if (format_specifier == c)
-		print += function(va_arg(ap, int));
+		print += ft_putchar(va_arg(ap, int));
 	else if (format_specifier == s)
-		print += function(va_arg(ap, char*));
+		print += ft_putstr(va_arg(ap, char*));
 	else if (format_specifier == p)
 		print += function(va_arg(ap, uintptr_t));
 	else if (format_specifier == d || format_specifier == i)
