@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:02:19 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/07 19:08:00 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/11 18:09:05 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ int	conversion_cases(char format_specifier, va_list ap)
 	else if (format_specifier == s)
 		print += ft_putstr(va_arg(ap, char*));
 	else if (format_specifier == p)
-		print += function(va_arg(ap, uintptr_t));
+		print += ft_put_ptr(va_arg(ap, uintptr_t));
 	else if (format_specifier == d || format_specifier == i)
 		print += ft_putnbr(va_arg(ap, int));
 	else if (format_specifier == u)
-		print += function(va_arg(ap, unsigned int));
+		print += ft_putnbr_unsigned(va_arg(ap, unsigned int));
 	else if (format_specifier == x)
-		print += function(va_arg(ap, unsigned int));
+		print += ft_putnbr_base(va_arg(ap, unsigned int), HEX_LC);
 	else if (format_specifier == X)
-		print += function(va_arg(ap, unsigned int));
+		print += ft_putnbr_base(va_arg(ap, unsigned int), HEX_UC);
 	else if (format_specifier == %)
 		print += ft_percentage(void);
 	else
@@ -57,7 +57,6 @@ int	ft_printf(const char *str, ...)
 			count_printed += putchar();
 			i++;
 		}
-	
 	}
 	va_end(ap);
 	return (count_printed);
