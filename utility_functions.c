@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 18:19:54 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/11 18:07:56 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/12 22:45:34 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	ft_putnbr(int nb)
 	return (count);
 }
 
-int	unsigned_lenght(unsigned int n)
+int	unsigned_length(unsigned int n)
 {
 	unsigned int	len;
 
@@ -67,7 +67,7 @@ int	unsigned_lenght(unsigned int n)
 		n++;
 	while (n != 0)
 	{
-		len /= 10;
+		n /= 10;
 		len++;
 	}
 	return (len);

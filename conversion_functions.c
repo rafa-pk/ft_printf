@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 13:20:49 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/11 18:13:01 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/12 22:48:23 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,27 @@ int	ft_put_ptr(uintptr_t nbr)
 }
 char	*unitoa(unsigned int nbr)
 {
+	int		len;
+	char	*conversion;
 
+	len = unsigned_length(nbr);
+	conversion = (char *)malloc(sizeof(char) * (len + 1));
+	if (!conversion)
+		return (NULL);
+	conversion[len] = '\0';
+	if (nbr == 0)
+	{
+		conversion[0] = '0';
+		return (conversion);
+	}
+	while (nbr != 0)
+	{
+		conversion[--len] = (nbr % 10) + '0';
+		nbr /= 10;
+	}
+	return (conversion);
 }
+
 int	ft_putnbr_unsigned(int nbr)
 {
 	char	*num;
@@ -110,5 +129,4 @@ int	ft_putnbr_unsigned(int nbr)
 	}
 	return((len);
 }
-
 

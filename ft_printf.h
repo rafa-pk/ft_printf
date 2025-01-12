@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 20:58:26 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/11 18:15:24 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/12 22:38:11 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		ft_putchar(int c);
 int		ft_putstr(char	*str);
 int		ft_putnbr(int nb);
 int		ft_percentage(void);
-int		unsigned_lenght(unsigned int n);
+int		unsigned_length(unsigned int n);
 int		base_is_valid(char *base);
 void	ft_putnbr_base(int nbr, char *base);
 int		ft_putnbr_ptr(uintptr_t nbr, char *base);
