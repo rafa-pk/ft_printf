@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 20:58:26 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/12 22:38:11 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/12 23:03:42 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 # include <string.h>
 # include <stdint.h>
 
-# define HEX_LC = "01233456789abcdef"
-# define HEX_UC = "0123456789ABCDEF"
+# define HEX_LC "01233456789abcdef"
+# define HEX_UC "0123456789ABCDEF"
 
 int		ft_printf(const char *str, ...);
 int		conversion_cases(char format_specifier, va_list ap);

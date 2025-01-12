@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:02:19 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/11 18:09:05 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/12 23:24:04 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ int	ft_printf(const char *str, ...)
 	va_start(ap, str);
 	i = 0;
 	count_printed = 0;
+	if (!str)
+		return (0);
 	while (str[i])
 	{
 		if (str[i] == '%' && str[i + 1])
@@ -53,11 +55,16 @@ int	ft_printf(const char *str, ...)
 			i++;
 		}
 		else
-		{
-			count_printed += putchar();
-			i++;
-		}
+			count_printed += ft_putchar(str[i]);
+		i++;
 	}
 	va_end(ap);
 	return (count_printed);
 }
+/*
+int	main(void)
+{
+	const char	*str = "mekie rei, fodeste %d vezes lol"
+	ft_printf(str, 0);
+	return (0);
+}*/

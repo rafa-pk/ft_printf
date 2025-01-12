@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 18:19:54 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/12 22:45:34 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/12 22:50:52 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,21 +56,6 @@ int	ft_putnbr(int nb)
 		count += ft_putnbr(bnb / 10);
 	count += ft_putchar((bnb % 10) + '0');
 	return (count);
-}
-
-int	unsigned_length(unsigned int n)
-{
-	unsigned int	len;
-
-	len = 0;
-	if (n == 0)
-		n++;
-	while (n != 0)
-	{
-		n /= 10;
-		len++;
-	}
-	return (len);
 }
 
 int	ft_percent(void)
