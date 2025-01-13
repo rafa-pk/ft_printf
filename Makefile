@@ -6,7 +6,7 @@
 #    By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/12 23:24:57 by raica-ba          #+#    #+#              #
-#    Updated: 2025/01/13 15:07:35 by raica-ba         ###   ########.fr        #
+#    Updated: 2025/01/13 15:56:00 by raica-ba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,14 +26,19 @@ SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 
 SRC_FILES = conversion_functions.c unsigned_functions.c ft_printf.c utility_functions.c\
 
+EXEC = ft_printf
+
 all: $(NAME)
 
 $(NAME): $(OBJ_DIR) $(OBJ)
 				@ar rcs $@ $(OBJ)
+				@ranlib $@
+
+$(EXEC): $(OBJ)
+				$(CC) $(FLAGS) -o $(EXEC) $(OBJ)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 				$(CC) $(FLAGS) -c $< -o $@
-
 $(OBJ_DIR):
 				@mkdir -p $(OBJ_DIR)
 
