@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 13:20:49 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/12 23:18:09 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/13 13:53:03 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,21 +37,24 @@ int	base_is_valid(char *base)
 	return (1);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+int	ft_putnbr_base(unsigned int nbr, char *base)
 {
 	size_t	len;
+	int		result;
 
 	len = ft_strlen(base);
+	result = 0;
 	if (base_is_valid(base))
 	{
 		if (nbr >= len)
 		{
-			ft_putnbr_base(nbr / len, base);
-			ft_putnbr_base(nbr % len, base);
+			result += ft_putnbr_base(nbr / len, base);
+			result += ft_putnbr_base(nbr % len, base);
 		}
 		else
-			write(1, base + nbr, 1);
+			result += write(1, base + nbr, 1);
 	}
+	return (result);
 }
 
 int	ft_putnbr_ptr(uintptr_t nbr, char *base)
