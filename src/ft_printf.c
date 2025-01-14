@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:02:19 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/13 15:46:46 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/14 12:14:18 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@ int	conversion_cases(char format_specifier, va_list ap)
 	if (format_specifier == 'c')
 		print += ft_putchar(va_arg(ap, int));
 	else if (format_specifier == 's')
-		print += ft_putstr(va_arg(ap, char*));
+		print += ft_putstr(va_arg(ap, char*));//needs fixing
 	else if (format_specifier == 'p')
-		print += ft_put_ptr(va_arg(ap, uintptr_t));
+		print += ft_put_ptr(va_arg(ap, uintptr_t));//needs fixing
 	else if (format_specifier == 'd' || format_specifier == 'i')
 		print += ft_putnbr(va_arg(ap, int));
 	else if (format_specifier == 'u')
 		print += ft_putnbr_unsigned(va_arg(ap, unsigned int));
 	else if (format_specifier == 'x')
-		print += ft_putnbr_base(va_arg(ap, unsigned int), HEX_LC);
+		print += ft_putnbr_base(va_arg(ap, unsigned int), HEX_LC);//needs fixing
 	else if (format_specifier == 'X')
 		print += ft_putnbr_base(va_arg(ap, unsigned int), HEX_UC);
 	else if (format_specifier == '%')
@@ -61,7 +61,7 @@ int	ft_printf(const char *str, ...)
 	va_end(ap);
 	return (count_printed);
 }
-
+/*
 int	main(void)
 {
 	char				c = 'r';
@@ -99,4 +99,4 @@ int	main(void)
 	printf("real percentage: %%\n");
 	ft_printf("my percentage: %%\n");	
 	return (0);
-}
+}*/
