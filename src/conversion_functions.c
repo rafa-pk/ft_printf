@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 13:20:49 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/13 13:53:03 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/14 12:21:31 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int	ft_put_ptr(uintptr_t ptr)
 
 	print = 0;
 	if (!ptr)
-		return (0);
+		write(1, "(nil)", 5);
 	else
 	{
 		print += write(1, "0x", 2);
