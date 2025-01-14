@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 23:15:29 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/12 23:17:13 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/14 12:08:56 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	unsigned_length(unsigned int n)
 	return (len);
 }
 
-char	*unitoa(unsigned int nbr)
+char	*ft_unitoa(unsigned int nbr)
 {
 	int		len;
 	char	*conversion;

@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 18:19:54 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/13 13:55:54 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/14 12:07:37 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	ft_putnbr(int nb)
 	return (count);
 }
 
-int	ft_percent(void)
+int	ft_percentage(void)
 {
 	write(1, "%", 1);
 	return (1);
