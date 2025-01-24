@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 13:20:49 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/14 12:21:31 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/24 15:57:39 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,11 +83,11 @@ int	ft_put_ptr(uintptr_t ptr)
 	int	print;
 
 	print = 0;
+	print += write(1, "0x", 2);
 	if (!ptr)
-		write(1, "(nil)", 5);
+		write(1, "0", 1);
 	else
 	{
-		print += write(1, "0x", 2);
 		print += ft_putnbr_ptr(ptr, HEX_LC);
 	}
 	return (print);

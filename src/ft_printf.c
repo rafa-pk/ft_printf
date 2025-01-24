@@ -6,11 +6,12 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:02:19 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/14 12:14:18 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/24 16:15:35 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <limits.h>
 
 int	conversion_cases(char format_specifier, va_list ap)
 {
@@ -20,15 +21,15 @@ int	conversion_cases(char format_specifier, va_list ap)
 	if (format_specifier == 'c')
 		print += ft_putchar(va_arg(ap, int));
 	else if (format_specifier == 's')
-		print += ft_putstr(va_arg(ap, char*));//needs fixing
+		print += ft_putstr(va_arg(ap, char *));
 	else if (format_specifier == 'p')
-		print += ft_put_ptr(va_arg(ap, uintptr_t));//needs fixing
+		print += ft_put_ptr(va_arg(ap, uintptr_t));
 	else if (format_specifier == 'd' || format_specifier == 'i')
 		print += ft_putnbr(va_arg(ap, int));
 	else if (format_specifier == 'u')
 		print += ft_putnbr_unsigned(va_arg(ap, unsigned int));
 	else if (format_specifier == 'x')
-		print += ft_putnbr_base(va_arg(ap, unsigned int), HEX_LC);//needs fixing
+		print += ft_putnbr_base(va_arg(ap, unsigned int), HEX_LC);
 	else if (format_specifier == 'X')
 		print += ft_putnbr_base(va_arg(ap, unsigned int), HEX_UC);
 	else if (format_specifier == '%')
@@ -65,10 +66,10 @@ int	ft_printf(const char *str, ...)
 int	main(void)
 {
 	char				c = 'r';
-	char				*str = NULL;
-	void				*p = NULL;
-	int					n = 0;
-	unsigned int		u = 0;
+	char				*str = "nique chat gpt";
+	void				*p = &str;
+	int					n = INT_MIN;
+	unsigned int		u = UINT_MAX;
 	unsigned int		x = 123;
 	unsigned int		X = 123;
 	

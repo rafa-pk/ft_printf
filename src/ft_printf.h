@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 20:58:26 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/13 13:52:44 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/24 15:42:42 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <string.h>
 # include <stdint.h>
 
-# define HEX_LC "01233456789abcdef"
+# define HEX_LC "0123456789abcdef"
 # define HEX_UC "0123456789ABCDEF"
 
 int		ft_printf(const char *str, ...);

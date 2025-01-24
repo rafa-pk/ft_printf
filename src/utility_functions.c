@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 18:19:54 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/14 12:07:37 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/24 15:39:11 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ int	ft_putstr(char *str)
 
 	i = 0;
 	if (!str)
+	{
+		write(1, "(null)", 6);
 		return (0);
+	}
 	while (str[i] != '\0')
 	{
 		write(1, &str[i], 1);
