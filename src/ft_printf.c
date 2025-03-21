@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:02:19 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/24 16:15:35 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/03/21 10:44:56 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,13 +56,17 @@ int	ft_printf(const char *str, ...)
 			i++;
 		}
 		else
-			count_printed += ft_putchar(str[i]);
+			write(1, &str[i], 1);
+			count_printed++;
 		i++;
 	}
 	va_end(ap);
 	return (count_printed);
 }
 /*
+change function utils to the least amount of functions possible, 1/file if doable.
+eg. ft_putchar/ft_putstr/ft_putptr/ft_putnbr_base
+
 int	main(void)
 {
 	char				c = 'r';
@@ -73,31 +77,34 @@ int	main(void)
 	unsigned int		x = 123;
 	unsigned int		X = 123;
 	
-	printf("real char: %c\n", c);
-	ft_printf("my char: %c\n", c);
+	printf("real char: %c         \n", c);
+	ft_printf("my char: %c         \n", c);
 
-	printf("real *str: %s\n", str);
-	ft_printf("my *str: %s\n", str);
+	printf("real *str: %s        \n", str);
+	ft_printf("my *str: %s        \n", str);
 
-	printf("real pointer: %p\n", p);
-	ft_printf("my pointer: %p\n", p);
+	printf("real pointer: %p       \n", p);
+	ft_printf("my pointer: %p       \n", p);
 
-	printf("real int: %i\n", n);
-	ft_printf("my int: %i\n", n);
+	printf("real int: %i      \n", n);
+	ft_printf("my int: %i      \n", n);
 
-	printf("real digit: %d\n", n);
-	ft_printf("my digit: %d\n", n);
+	printf("real digit: %d     \n", n);
+	ft_printf("my digit: %d     \n", n);
 
-	printf("real unsigned int: %u\n", u);
-	ft_printf("my unsigned int: %u\n", u);
+	printf("real unsigned int: %u    \n", u);
+	ft_printf("my unsigned int: %u    \n", u);
 
-	printf("real hexadecimal lc: %x\n", x);
-	ft_printf("my hexadecimal lc: %x\n", x);
+	printf("real hexadecimal lc: %x   \n", x);
+	ft_printf("my hexadecimal lc: %x   \n", x);
 
-	printf("real hexadecimal uc: %X\n", X);
-	ft_printf("my hexadecimal uc: %X\n", X);
+	printf("real hexadecimal uc: %X  \n", X);
+	ft_printf("my hexadecimal uc: %X  \n", X);
 
-	printf("real percentage: %%\n");
-	ft_printf("my percentage: %%\n");	
+	printf("real percentage: %% \n");
+	ft_printf("my percentage: %% \n");
+
+	printf(" %c %c %c\n ", '0', 0, '1');
+	ft_printf(" %c %c %c ", '0', 0, '1');
 	return (0);
 }*/
