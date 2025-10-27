@@ -6,7 +6,7 @@
 /*   By: rvaz-da- <rvaz-da-@student.42belgium.be>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:46:59 by rvaz-da-          #+#    #+#             */
-/*   Updated: 2025/10/27 20:50:53 by rvaz-da-         ###   ########.fr       */
+/*   Updated: 2025/10/27 23:14:57 by rvaz-da-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int	ft_putnbr_base(long long nb, int base, char *new_base, int flag)
 		count = 2;
 		flag = 0;
 	}
-	if (nb < 0)
+	if (nb < 0 && !flag)
 	{
-		ft_putchar('-');
+		count += ft_putchar('-');
 		nb = -nb;
 	}
 	if (nb >= base)
