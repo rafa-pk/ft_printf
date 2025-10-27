@@ -6,7 +6,7 @@
 /*   By: rvaz-da- <rvaz-da-@student.42belgium.be>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 13:11:16 by rvaz-da-          #+#    #+#             */
-/*   Updated: 2025/10/27 21:54:59 by rvaz-da-         ###   ########.fr       */
+/*   Updated: 2025/10/27 21:59:04 by rvaz-da-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int	ft_printf(const char *str, ...)
 {
 	int		i;
-	int 	count;
+	int		count;
 	va_list	ap;
-	
+
 	i = 0;
 	count = 0;
 	va_start(ap, str);

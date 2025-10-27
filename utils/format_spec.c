@@ -6,7 +6,7 @@
 /*   By: rvaz-da- <rvaz-da-@student.42belgium.be>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:40:55 by rvaz-da-          #+#    #+#             */
-/*   Updated: 2025/10/27 20:44:21 by rvaz-da-         ###   ########.fr       */
+/*   Updated: 2025/10/27 21:57:55 by rvaz-da-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	format_spec(char fmt, va_list *ap)
 	else if (fmt == '%')
 		count += ft_putchar('%');
 	else
-			return (-1);
+		return (-1);
 	return (count);
 }
-

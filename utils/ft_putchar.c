@@ -6,14 +6,14 @@
 /*   By: rvaz-da- <rvaz-da-@student.42belgium.be>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:07:50 by rvaz-da-          #+#    #+#             */
-/*   Updated: 2025/10/27 17:14:51 by rvaz-da-         ###   ########.fr       */
+/*   Updated: 2025/10/27 21:58:17 by rvaz-da-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 int	ft_putchar(char c)
-{		
+{
 	write(1, &c, 1);
 	return (1);
 }
