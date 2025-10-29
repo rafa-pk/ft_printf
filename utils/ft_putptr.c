@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rvaz-da- <rvaz-da-@student.42belgium.be>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 17:46:59 by rvaz-da-          #+#    #+#             */
-/*   Updated: 2025/10/29 11:39:15 by rvaz-da-         ###   ########.fr       */
+/*   Created: 2025/10/29 11:25:03 by rvaz-da-          #+#    #+#             */
+/*   Updated: 2025/10/29 11:51:18 by rvaz-da-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_base(long long nb, int base, char *new_base)
+int	ft_putptr(unsigned long long nb, int flag)
 {
 	int	count;
 
 	count = 0;
-	if (nb < 0)
+	if (nb == 0)
+		return (ft_putstr("(nil)"));
+	if (flag)
 	{
-		count += ft_putchar('-');
-		nb = -nb;
+		count += ft_putstr("0x");
+		flag = 0;
 	}
-	if (nb >= base)
-		count += ft_putnbr_base(nb / base, base, new_base);
-	ft_putchar(new_base[nb % base]);
+	if (nb >= 16)
+		count += ft_putptr(nb / 16, 0);
+	ft_putchar(HEX_LC[nb % 16]);
 	count++;
 	return (count);
 }

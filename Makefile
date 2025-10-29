@@ -6,7 +6,7 @@
 #    By: rvaz-da- <rvaz-da-@student.42belgium.be>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/27 12:52:03 by rvaz-da-          #+#    #+#              #
-#    Updated: 2025/10/27 20:39:24 by rvaz-da-         ###   ########.fr        #
+#    Updated: 2025/10/29 11:36:03 by rvaz-da-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ FLAGS = -Wall -Werror -Wextra -g
 INCLUDES = -I ./src
 
 SRC = src/ft_printf.c utils/format_spec.c utils/ft_putchar.c utils/ft_putstr.c \
-	  utils/ft_putnbr_base.c \
+	  utils/ft_putnbr_base.c utils/ft_putptr.c \
 
 OBJ = $(SRC:.c=.o)
 

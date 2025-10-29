@@ -6,7 +6,7 @@
 /*   By: rvaz-da- <rvaz-da-@student.42belgium.be>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 13:09:20 by rvaz-da-          #+#    #+#             */
-/*   Updated: 2025/10/28 21:16:48 by rvaz-da-         ###   ########.fr       */
+/*   Updated: 2025/10/29 11:45:39 by rvaz-da-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	ft_printf(const char *str, ...);
 int	format_spec(char fmt, va_list *ap);
 int	ft_putchar(char c);
 int	ft_putstr(char *str);
-int	ft_putnbr_base(long long nbr, int base, char *new_base, int flag);
+int	ft_putnbr_base(long long nb, int base, char *new_base);
+int	ft_putptr(unsigned long long nb, int flag);
 
 #endif
