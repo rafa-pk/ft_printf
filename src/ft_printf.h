@@ -6,7 +6,7 @@
 /*   By: rvaz-da- <rvaz-da-@student.42belgium.be>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 13:09:20 by rvaz-da-          #+#    #+#             */
-/*   Updated: 2025/10/29 11:45:39 by rvaz-da-         ###   ########.fr       */
+/*   Updated: 2025/10/29 12:32:07 by rvaz-da-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdarg.h>
-# include <stdint.h>
 
 # define HEX_LC "0123456789abcdef"
 # define HEX_UC "0123456789ABCDEF"
